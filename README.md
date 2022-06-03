@@ -1,2 +1,6 @@
 # Car Sale App
-Car Sale Back end REST API Using Spring Boot &amp; MySQL
+Car Sale Back end REST API
+
+# Technologies
+
+Java, Spring boot, MYSQL
