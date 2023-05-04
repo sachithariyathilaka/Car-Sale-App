@@ -7,7 +7,6 @@ import com.carSale.Model.Car;
 import com.carSale.Model.User;
 import com.carSale.Service.Impl.UserServiceImpl;
 import com.carSale.Utill.JwtTokenUtil;
-import javafx.application.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +18,7 @@ import java.util.logging.Logger;
 @CrossOrigin
 public class UserController {
 
-    private static final Logger logger= Logger.getLogger(String.valueOf(Application.class));
+    private static final Logger logger= Logger.getLogger(String.valueOf(UserController.class));
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
