@@ -25,7 +25,7 @@ pipeline {
         stage('Run Application'){
              steps{
                 script{
-                    bat 'docker run --network springboot-mysql-network --name carsale-app-container -p 8081:8081'
+                    bat 'docker run --network springboot-mysql-network --name carsale-app-container -p 8081:8081 -d carsale-backend'
                 }
             }
         }
