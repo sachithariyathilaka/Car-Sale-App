@@ -17,6 +17,9 @@ pipeline {
         stage('Build Docker Image'){
             steps{
                 script{
+                    bat 'docker pull mysql:5.7'
+                    bat 'docker network create springboot-mysql-network'
+                    bat 'docker run --name mysqldb --network springboot-mysql-network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=carsale -d mysql:5.7'
                     bat 'docker build -t carsale-backend .'
                 }
             }
@@ -25,7 +28,7 @@ pipeline {
         stage('Run Application'){
              steps{
                 script{
-                    bat 'docker run -p 8081:8081 carsale-backend'
+                    bat 'docker run --network springboot-mysql-network --name springboot-container -p 8081:8081 -d carsale-backend'
                 }
             }
         }
