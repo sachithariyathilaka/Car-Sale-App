@@ -1,5 +1,8 @@
 package com.carSale.Service;
+import com.carSale.Model.Car;
 import com.carSale.Model.User;
+
+import java.util.ArrayList;
 
 
 public interface UserService {
@@ -12,4 +15,9 @@ public interface UserService {
 
     User getUserById(int id);
 
+    Car saveCar(Car car);
+
+    Car findCar(String Name);
+
+    ArrayList<Car> getAllCarList();
 }

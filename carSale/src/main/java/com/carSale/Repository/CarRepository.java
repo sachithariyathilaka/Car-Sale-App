@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface CarRepository extends CrudRepository<Car, Integer> {
-    Car save(Car car);
     Car findByName(String Name);
-    ArrayList<Car> getAll();
 
 }

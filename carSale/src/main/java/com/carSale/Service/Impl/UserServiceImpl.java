@@ -5,7 +5,6 @@ import com.carSale.Model.User;
 import com.carSale.Repository.CarRepository;
 import com.carSale.Repository.UserRepository;
 import com.carSale.Service.UserService;
-import javafx.application.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -34,7 +33,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    private static final Logger logger= Logger.getLogger(String.valueOf(Application.class));
+    private static final Logger logger= Logger.getLogger(String.valueOf(UserServiceImpl.class));
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -95,6 +94,6 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
     @Override
     public ArrayList<Car> getAllCarList() {
-        return carRepository.getAll();
+        return (ArrayList<Car>) carRepository.findAll();
     }
 }
