@@ -32,3 +32,7 @@ Step 11: docker run --network springboot-mysql-network --name springboot-contain
 Step 12: docker ps
 
 Step 13: docker logs 1c4
+
+Step 14: docker stop carsale-app-container
+
+Step 15: docker start carsale-app-container
