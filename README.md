@@ -33,6 +33,6 @@ Step 12: docker ps
 
 Step 13: docker logs 1c4
 
-Step 14: docker stop carsale-app-container
+Step 14: docker start mysqldb
 
 Step 15: docker start carsale-app-container
