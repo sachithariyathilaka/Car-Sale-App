@@ -15,7 +15,7 @@ Step 03: docker network create springboot-mysql-network
 
 Step 04: docker network ls
 
-Step 05: docker run --name mysqldb --network springboot-mysql-network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=carsale -d mysql:5.7
+Step 05: docker run --name mysqldb-container --network springboot-mysql-network -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=carsale -d mysql:5.7
 
 Step 06: docker exec -it c23 bash
 
@@ -33,10 +33,10 @@ Step 12: docker ps
 
 Step 13: docker logs 1c4
 
-Step 14: docker stop mysqldb
+Step 14: docker stop mysqldb-container
 
 Step 15: docker stop carsale-app-container
 
-Step 16: docker start mysqldb
+Step 16: docker start mysqldb-container
 
 Step 17: docker start carsale-app-container
