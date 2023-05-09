@@ -25,9 +25,9 @@ pipeline {
         stage('Run Application'){
              steps{
                 script{
-                    bat 'docker stop mysqldb'
+                    bat 'docker stop mysqldb-container'
                     bat 'docker stop carsale-app-container'
-                    bat 'docker start mysqldb'
+                    bat 'docker start mysqldb-container'
                     bat 'docker start carsale-app-container'
                 }
             }
