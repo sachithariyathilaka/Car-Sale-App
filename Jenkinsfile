@@ -26,9 +26,9 @@ pipeline {
              steps{
                 script{
                     bat 'docker stop mysqldb-container'
-                    bat 'docker stop carsale-app-container'
+                    bat 'docker stop springboot-container'
                     bat 'docker start mysqldb-container'
-                    bat 'docker start carsale-app-container'
+                    bat 'docker start springboot-container'
                 }
             }
         }
